@@ -4,6 +4,9 @@ REM Update the Outlook Calendar and commit changes to Git
 REM Change the current directory to the location of this script
 CD /d "%~dp0"
 
+REM Pull the latest changes from the remote repository before updating the calendar
+git pull --rebase
+
 REM Export Outlook Calendar to calendar.ics
 python calendar_export.py
 
