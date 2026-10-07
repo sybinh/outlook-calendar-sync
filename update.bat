@@ -20,11 +20,11 @@ REM Commit and push the changes if there are any
 git commit -m "Update calendar.ics - %date% %time%"
 git push
 
-echo Calendar updated and pushed successfully
+echo [%date% %time%] Calendar updated and pushed successfully >> task.log
 goto END_SCRIPT
 
 :NO_CHANGE
-echo No update to commit
+echo [%date% %time%] No update to commit >> task.log
 goto END_SCRIPT
 
 :END_SCRIPT
