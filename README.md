@@ -336,7 +336,7 @@ schtasks /create ^
  /tn "Outlook Calendar Sync" ^
  /sc minute ^
  /mo 15 ^
- /tr "cmd.exe /c \"C:\Path\To\update.bat\"" ^
+ /tr "wscript.exe \"%~dp0run_hidden.vbs\""  ^
  /f
 ```
 
@@ -347,7 +347,7 @@ schtasks /create ^
  /tn "Outlook Calendar Sync" ^
  /sc minute ^
  /mo 15 ^
- /tr "cmd.exe /c \"D:\Projects\outlook-calendar-sync\update.bat\"" ^
+ /tr "wscript.exe \"%~dp0run_hidden.vbs\"" 
  /f
 ```
 
